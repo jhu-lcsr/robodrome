@@ -5,4 +5,4 @@ sidebar:
   nav: "docs"
 ---
 
-How to operate mocap.
+Information on how to set up and operate Optitrack system.
