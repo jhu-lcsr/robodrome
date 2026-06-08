@@ -38,4 +38,4 @@ Router Admin Contacts:
 ## mDNS
 mDNS is a LAN UDP multicast DNS service that is in use by default on most Linux devices. Use of mDNS is highly recommended as it alleviates the need for static IPs. Machines are accessible at `<hostname>.local`. E.g. to `ssh` a device named `kalman` one can `ssh kalman.local` without ever knowing it's local IP.
 
-You can discover hostnames with nmap `nmap -sn 192.168.0.*` or 
+You can discover hostnames with nmap `nmap -sn 192.168.0.*`.
