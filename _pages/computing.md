@@ -26,6 +26,8 @@ Please set your devices to DHCP (dynamic IP) and allow the router to serve your 
 ## Common Issues
 The UFW firewall on Ubuntu blocks Optitrack Multicast traffic by default. This can be confirmed in `dmesg` logs. `sudo ufw disable && sudo systemctl disable ufw` to disable the firewall.
 
+Optitrack uses +Y for "up". However, streaming is configured to flip +Y and +Z so that +Z is up per ROS2 convention. This means your rigid bodies should be set to +Y up.
+
 ## Router Administration
 
 Please contact a member of AIRO or ACE lab if you need to do any router administration. This includes:
