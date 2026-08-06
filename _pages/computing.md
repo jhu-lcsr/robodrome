@@ -23,6 +23,9 @@ It is also possible to operate ROS in localhost only mode to prevent messages fr
 ## IP Addresses
 Please set your devices to DHCP (dynamic IP) and allow the router to serve your device an IP. If you need a static IP, contact a router admin. Static IP's should be set from the router to ensure deconfliction.
 
+## Common Issues
+The UFW firewall on Ubuntu blocks Optitrack Multicast traffic by default. This can be confirmed in `dmesg` logs. `sudo ufw disable && sudo systemctl disable ufw` to disable the firewall.
+
 ## Router Administration
 
 Please contact a member of AIRO or ACE lab if you need to do any router administration. This includes:
