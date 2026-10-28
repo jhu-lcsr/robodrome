@@ -13,3 +13,7 @@ To request access to the Flight Room facilities, please contact:
 
 ## Safety Training
 All users must complete safety training before using the facility.
+
+
+## Calender
+Ask for an invite to the shared Outlook calender to book time in the space

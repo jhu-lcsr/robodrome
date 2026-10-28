@@ -6,9 +6,15 @@ sidebar:
 ---
 
 ## Network setup
-You can connect to the WiFi network with SSID `stieff-mocap` to recieve messages from the Optitrack system. The system is set to multicast from a Windows machine running Motive at `192.168.0.92`. Please do not change the system to Unicast as this will prevent multiple users from recieving messages simultaneously.
+You can connect to the WiFi network with SSID `stieff-mocap` to recieve messages from the Optitrack system. The system is set to multicast from a Windows machine running Motive at `192.168.50.161`. Please do not change the system to Unicast as this will prevent multiple users from recieving messages simultaneously.
 
-You can use the [MOCAP4ROS2](https://github.com/orgs/MOCAP4ROS2-Project/repositories) packages to automatically convert the native [NatNet](https://optitrack.com/software/natnet-sdk) messages to ROS2 messages.
+You can use the [MOCAP4ROS2](https://github.com/MOCAP4ROS2-Project/mocap4ros2_optitrack) packages to automatically convert the native [NatNet](https://optitrack.com/software/natnet-sdk) messages to ROS2 messages.
+
+You will have to edit `mocap4ros2_optitrack/mocap4r2_optitrack_driver/config/mocap4r2_optitrack_driver_params.yaml` and fill in your IP as `local_address` and the Motive machine IP `server_address: 192.168.50.161`. You can test the system is functioning with:
+```
+ros2 launch mocap4r2_optitrack_driver optitrack2.launch.py
+ros2 topic hz /rigid_bodies
+```
 
 ## Adding Rigid Bodies
 You can add Rigid Bodies using the Motive instance running on the Mocap Windows PC physically located in the space. Observe the following guidelines:
@@ -37,7 +43,6 @@ Please contact a member of AIRO or ACE lab if you need to do any router administ
 
 Router Admin Contacts:
 - Ashwin Gupta (agupt139@jh.edu)
-- Rahul Nunna (rnunna1@jh.edu)
 - Sriram Kodey (skodey1@jh.edu)
 
 ## mDNS
